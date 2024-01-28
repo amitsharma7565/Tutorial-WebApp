@@ -8,7 +8,7 @@ public class TutorialWebAppApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TutorialWebAppApplication.class, args);
-		System.out.println("The appplication is working fine");
-	}
+	
 
+}
 }
