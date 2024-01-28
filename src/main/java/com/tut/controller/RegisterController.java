@@ -23,5 +23,4 @@ public class RegisterController {
 		Register registerResponse =this.registerInterface.registerUser(register);
 		return new ResponseEntity<Register>(registerResponse, HttpStatus.CREATED) ;
 	}
-	
 }
