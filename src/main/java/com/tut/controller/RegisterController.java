@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.tut.Exception.EmailAlreadyExistsException;
 import com.tut.model.Register;
 import com.tut.service.RegisterInterface;
 
@@ -22,7 +23,11 @@ public class RegisterController {
 	@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.POST, RequestMethod.OPTIONS})
 	@PostMapping("/create")
 	public ResponseEntity<Register> registerUser( @RequestBody Register register){
-		Register registerResponse =this.registerInterface.registerUser(register);
-		return new ResponseEntity<Register>(registerResponse, HttpStatus.CREATED) ;
+		  try {
+	            Register registerResponse = registerInterface.registerUser(register);
+	            return new ResponseEntity<>(registerResponse, HttpStatus.CREATED);
+	        } catch (EmailAlreadyExistsException e) {
+	            return ResponseEntity.status(HttpStatus.CONFLICT).body(null);
+	        }
 	}
 }
