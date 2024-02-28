@@ -13,6 +13,6 @@ public class DashboardController {
 	@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.POST, RequestMethod.OPTIONS})
 	@GetMapping("/check")
 	public void check() {
-		System.out.println("its working");
+		
 	}
 }
