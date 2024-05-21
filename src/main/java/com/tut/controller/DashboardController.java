@@ -12,7 +12,7 @@ public class DashboardController {
 	
 	@CrossOrigin(origins = "http://localhost:3000", methods = {RequestMethod.POST, RequestMethod.OPTIONS})
 	@GetMapping("/check")
-	public void check() {
-		System.out.print("this is dashboard endpoint");
+	public String check() {
+		return "Welcome to Tutorial Web Application";
 	}
 }

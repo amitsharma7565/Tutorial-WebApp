@@ -68,6 +68,7 @@
 				</configuration>
 			</plugin>
 		</plugins>
+		<finalName>Tutorial-Web-Application</finalName>
 	</build>
 
 </project>
