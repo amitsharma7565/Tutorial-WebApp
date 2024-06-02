@@ -7,9 +7,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TutorialWebAppApplication {
 
 	public static void main(String[] args) {
-		
+
 		SpringApplication.run(TutorialWebAppApplication.class, args);
-		System.out.println("***************Application Start*************");
-		
-}
+
+	}
 }
