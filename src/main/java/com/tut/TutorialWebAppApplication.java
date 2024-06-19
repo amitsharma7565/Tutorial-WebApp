@@ -10,5 +10,7 @@ public class TutorialWebAppApplication {
 
 		SpringApplication.run(TutorialWebAppApplication.class, args);
 
+		System.out.println("");
+
 	}
 }
